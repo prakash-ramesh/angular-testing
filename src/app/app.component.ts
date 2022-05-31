@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-testing';
+  title = 'Angular Testing';
+  loadedMenu = 'recipe';
+
+  onMenuChanged(menu: string) {
+    this.loadedMenu = menu;
+  }
 }

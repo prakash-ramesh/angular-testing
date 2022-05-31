@@ -1,0 +1,9 @@
+<div class="row mt-3">
+  <app-shopping-edit (addItem)="onAddItem($event)"></app-shopping-edit>
+  <hr />
+  <ul>
+    <a *ngFor="let i of ingredients">
+      {{i.name}} ({{i.amount}})
+    </a>
+  </ul>
+</div>

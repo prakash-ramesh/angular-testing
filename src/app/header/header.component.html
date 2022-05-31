@@ -1,0 +1,45 @@
+<nav class="navbar navbar-dark navbar-expand-sm">
+  <div class="container-fluid">
+    <!-- Links -->
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Recipe Book</a>
+
+    <div class="nav navbar-nav navbar-right">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarToggler"
+        aria-controls="navbarToggler"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        appDropdown
+        (toggle)="toggleOpen()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarToggler" [ngClass]="isOpen ? 'show' : ''">
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  (click)="onSelect('shopping-list')">Shopping List</a>
+        </li>
+        <li class="nav-item">
+          <mat-form-field appearance="standard">
+            <mat-label>Manage</mat-label>
+            <mat-select panelClass="panel-red">
+              <mat-option>
+                <a class="nav-link" href="#">Save Data</a>
+              </mat-option>
+              <mat-option>
+                <a class="nav-link" href="#">Fetch Data</a>
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </li>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,9 @@
+<div class="row mt-2">
+  <div class="col-md-3">
+    <app-recipe-list (recipeDetail)="selectedRecipe($event)"></app-recipe-list>
+  </div>
+  <div class="col-md-9 mt-2">
+    <app-recipe-detail [recipe]="selRecipe" *ngIf="selRecipe.name !== ''"></app-recipe-detail>
+    <p *ngIf="selRecipe.name === ''">Select Recipe to Load Details</p>
+  </div>
+</div>
